@@ -1,0 +1,39 @@
+@import "vendors.scss";
+
+//шрифты
+@import "fonts.scss";
+
+//переменный и миксины
+@import "_vars.scss";
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+
+//глобальные модули
+@import "intro.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "rait.scss";
+@import "popup.scss";
+@import "rait-select.scss";
+@import "copycode.scss";
+
+//модули
+@import "index-page.scss";
+@import "search-form.scss";
+@import "filters.scss";
+@import "main-bots.scss";
+@import "bots-sec.scss";
+@import "bot-item.scss";
+@import "breadcrumbs.scss";
+@import "botpage-main.scss";
+@import "botpage-message.scss";
+@import "pics.scss";
+@import "botpage-desc.scss";
+@import "chat.scss";
+@import "add-bot.scss";
+@import "green-message.scss";
+@import "my-bot.scss";
+@import "manag-bot.scss";
+

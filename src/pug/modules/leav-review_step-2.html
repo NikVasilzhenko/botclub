@@ -1,0 +1,27 @@
+<div class="popup">
+  <div class="popup__overlay"></div>
+  <div class="popup__blc">
+    <button class="btn popup__close" title="Close"></button>
+    <div class="popup__main">
+      <h2 class="popup__title">Write a review</h2>
+      <form action="#" method="post" id="popup-review" class="popup-review">        
+        <p class="popup-review__txt">How would you rate <a href="#">@mazekinebot</a>?</p>
+        <div class="rait-select">
+          <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="1"></div>
+          <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="2"></div>
+          <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="3"></div>
+          <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="4"></div>
+          <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="5"></div>
+        </div>
+        <textarea class="input textarea" name="review" placeholder="Leave the review (optionally)"></textarea>
+        <div class="popup-review__capcha">
+          /// капча ///
+        </div>
+      </form>      
+    </div>
+    <div class="popup__footer">
+      <a href="#" target="_blank" class="link">Reviews policy</a>
+      <button class="btn btn_submit" form="popup-review">Submit</button>
+    </div>
+  </div>
+</div>

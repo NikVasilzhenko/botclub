@@ -1,0 +1,79 @@
+<form action="#" method="post" class="add-bot-form">
+    <div class="add-bot-form__wrap">
+      <div class="add-bot-form__row">
+        <label class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Bot username</span>
+          <input type="text" name="bot_username" class="input add-bot-form-item__input" placeholder="@username">
+        </label>
+      </div>
+      <div class="add-bot-form__row">
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Served countries</span>          
+          <div class="add-bot-form__select" id="countries">
+            <input autocomplete="off" type="text" name="select_country" class="input add-bot-form-item__input" placeholder="Select country" id="countries-input">
+            <div class="add-bot-form__selected" id="countries-selected"></div>
+            <ul class="add-bot-form__datalist" id="countries-ul"></ul>
+          </div>
+        </div>
+        
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Supported languages</span>          
+          <div class="add-bot-form__select" id="languages">
+            <input autocomplete="off" type="text" name="select_languages" class="input add-bot-form-item__input" placeholder="Supported languages" id="languages-input">
+            <div class="add-bot-form__selected" id="languages-selected"></div>
+            <ul class="add-bot-form__datalist" id="languages-ul"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="add-bot-form__row">
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Category</span>          
+          <div class="add-bot-form__select" id="category">
+            <input autocomplete="off" type="text" name="select_categorys" class="input add-bot-form-item__input" placeholder="Select category" id="category-input">
+            <div class="add-bot-form__selected" id="category-selected"></div>
+            <ul class="add-bot-form__datalist" id="category-ul"></ul>
+          </div>
+        </div>
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Age limitation</span>          
+          <div class="add-bot-form__select" id="age">
+            <input disabled autocomplete="off" type="text" name="age_limitation" class="input add-bot-form-item__input" placeholder="Select age limitation" id="age-input">
+<!--            <div class="add-bot-form__selected" id="age-selected"></div>-->
+            <ul class="add-bot-form__datalist" id="age-ul"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="add-bot-form__bar clearfix">
+        <div class="add-bot-form__checkbox">
+          <div class="checkbox">
+            <div class="checkbox__title">Are you the owner or the user?</div>
+            <label class="checkbox__item">
+              <input type="radio" name="user_type" onchange="showUserForm();" value="owner" checked>
+              <span class="checkbox__item-name">I am the owner</span>
+            </label>
+            <label class="checkbox__item">
+              <input type="radio" name="user_type" onchange="showUserForm();" value="user" id="js-user-radio">
+              <span class="checkbox__item-name">I am the user</span>
+            </label>
+          </div>
+        </div>
+        <div class="add-bot-form__rait" id="js-user-rait">
+          <div class="add-bot-form__rait-title">How would you rank the bot?</div>
+          <div class="rait-select">
+            <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="1"></div>
+            <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="2"></div>
+            <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="3"></div>
+            <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="4"></div>
+            <div class="rait-select__star js-review-star" onclick="rait(this);" data-value="5"></div>
+          </div>
+          <textarea class="input textarea" name="review" placeholder="Leave the review (optionally)"></textarea>
+        </div>
+        <div class="add-bot-form__capcha">
+          /// капча ///
+        </div>
+      </div>
+      <div class="add-bot-form__footer">
+        <button class="btn btn_submit" type="submit">Send for review</button>
+      </div>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+.search-form{
+  width: 100%;
+  position: relative;
+  cursor: text;
+  &__input{background-color: #fff;}  
+  &__btn{
+    background: url(../img/svg/search-orange.svg) center center no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    cursor: pointer;
+  }
+}

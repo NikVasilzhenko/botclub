@@ -1,0 +1,76 @@
+<div class="popup">
+  <div class="popup__overlay"></div>
+  <div class="popup__blc">
+    <button class="btn popup__close" title="Close"></button>
+    <div class="popup__main">
+      <h2 class="popup__title">Tell us what’s wrong</h2>
+      <form action="#" method="post" id="popup-review-bot-step-1" class="popup-review-checklist">
+        <label class="checkitem">
+          <input type="checkbox">
+          <span class="checkitem__name">Bot doesn’t work</span>
+        </label>        
+        <label class="checkitem">
+          <input type="checkbox" onchange="this.parentElement.nextElementSibling.classList.toggle('open')">
+          <span class="checkitem__name">Wrong category</span>
+        </label>
+        <div class="popup-review-checklist__hide">
+          <div class="add-bot-form-item">          
+            <div class="add-bot-form__select" id="category">
+              <input autocomplete="off" type="text" name="select_categorys" class="input add-bot-form-item__input" placeholder="Select correct categories" id="category-input">
+              <div class="add-bot-form__selected" id="category-selected"></div>
+              <ul class="add-bot-form__datalist" id="category-ul"></ul>
+            </div>
+          </div>
+        </div>
+        <label class="checkitem">
+          <input type="checkbox" onchange="this.parentElement.nextElementSibling.classList.toggle('open')">
+          <span class="checkitem__name">Wrong supported languages</span>
+        </label>
+        <div class="popup-review-checklist__hide">
+          <div class="add-bot-form-item">          
+            <div class="add-bot-form__select" id="languages">
+              <input autocomplete="off" type="text" name="select_languages" class="input add-bot-form-item__input" placeholder="Select correct languages" id="languages-input">
+              <div class="add-bot-form__selected" id="languages-selected"></div>
+              <ul class="add-bot-form__datalist" id="languages-ul"></ul>
+            </div>
+          </div>
+        </div>
+        <label class="checkitem">
+          <input type="checkbox" onchange="this.parentElement.nextElementSibling.classList.toggle('open')">
+          <span class="checkitem__name">Wrong supported countries</span>
+        </label>
+        <div class="popup-review-checklist__hide">
+          <div class="add-bot-form-item">         
+            <div class="add-bot-form__select" id="countries">
+              <input autocomplete="off" type="text" name="select_country" class="input add-bot-form-item__input" placeholder="Select correct countries" id="countries-input">
+              <div class="add-bot-form__selected" id="countries-selected"></div>
+              <ul class="add-bot-form__datalist" id="countries-ul"></ul>
+            </div>
+          </div>
+        </div>
+        <label class="checkitem">
+          <input type="checkbox" onchange="this.parentElement.nextElementSibling.classList.toggle('open')">
+          <span class="checkitem__name">Wrong age restriction</span>
+        </label>
+        <div class="popup-review-checklist__hide">
+          <div class="add-bot-form-item">        
+            <div class="add-bot-form__select" id="age">
+              <input disabled autocomplete="off" type="text" name="age_limitation" class="input add-bot-form-item__input" placeholder="Select age limitation" id="age-input">
+              <ul class="add-bot-form__datalist" id="age-ul"></ul>
+            </div>
+          </div>
+        </div>
+        <label class="checkitem">
+          <input type="checkbox">
+          <span class="checkitem__name">Obscene language in description</span>
+        </label>
+        <div class="popup-review__capcha">
+          /// капча ///
+        </div>
+      </form>      
+    </div>
+    <div class="popup__footer popup__footer_flexend">      
+      <button class="btn btn_submit" form="popup-review-bot-step-1">Submit</button>
+    </div>
+  </div>
+</div>

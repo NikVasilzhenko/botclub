@@ -1,0 +1,214 @@
+<div class="container">
+  <div class="manag-bot-wrap">
+    <div class="manag-bot-wrap__col">
+      <h1 class="manag-bot-wrap__title">Manage <a href="#" target="_blank">@mazekinebot</a></h1>
+      <section class="manag-bot-sec">
+        <h2 class="manag-bot-sec__title">TEXTS</h2>
+        <label class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Display name <span class="hint"></span></span>
+          <span class="add-bot-form-item__letter-counter"><span>0</span>/50</span>
+          <input type="text" name="display_name" class="input add-bot-form-item__input" oninput="countedLetterd(this, 50);" onfocus="swichOnSection('js-blc-2');" onblur="swichOffSection('js-blc-2');">
+        </label>
+        <label class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Short description <span class="hint"></span></span>
+          <span class="add-bot-form-item__letter-counter"><span>0</span>/120</span>
+          <input type="text" name="short_description" class="input add-bot-form-item__input" oninput="countedLetterd(this, 120);" onfocus="swichOnSection('js-blc-3');" onblur="swichOffSection('js-blc-3');">
+        </label>
+        <label class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Full description <span class="hint"></span></span>
+          <span class="add-bot-form-item__letter-counter"><span>0</span>/4 000</span>
+          <textarea class="input textarea" name="full_description" oninput="countedLetterd(this, 4000);" onfocus="swichOnSection('js-blc-6');" onblur="swichOffSection('js-blc-6');"></textarea>
+        </label>
+        <div class="manag-bot-sec__footer">
+          <div></div>
+          <button class="btn btn_red">Publish texts</button>
+        </div>
+      </section>
+      <section class="manag-bot-sec">
+        <h2 class="manag-bot-sec__title">IMAGES</h2>
+        <div class="add-bot-form-item">
+          <div class="add-bot-form-item__title">Logotype <span class="hint"></span></div>
+          <div class="add-bot-form-item__txt">Upload the square bot icon in JPEG, PNG or SVG format and at least 262x262 in dimensions. By default we will take the icon from Telegram</div>
+          <div class="uploads" onmouseover="swichOnSection('js-blc-1');" onmouseout="swichOffSection('js-blc-1');">
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__pic"></div>
+                <div class="uploads-item__name">mazekine_logo.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+          </div>
+          <label class="uploads-bar" onmouseover="swichOnSection('js-blc-1');" onmouseout="swichOffSection('js-blc-1');">
+            <input type="file" name="logotype" hidden>
+            <span class="uploads-bar__txt mob-hide">Drag file here to update logotype (JPG, PNG, SVG)</span>
+            <span class="uploads-bar__txt mob-show">Tap to upload files</span>
+            <span class="btn btn_red">Browse file</span>
+          </label>
+        </div>
+        <div class="add-bot-form-item">
+          <div class="add-bot-form-item__title">Desktop previews <span class="hint"></span></div>
+          <span class="add-bot-form-item__letter-counter"><span>3</span>/8</span>
+          <div class="add-bot-form-item__txt">Upload the previews of your bot in JPEG, PNG or SVG formats in 500x944 resolution to display on desktop</div>
+          <div class="uploads" onmouseover="swichOnSection('js-blc-5');" onmouseout="swichOffSection('js-blc-5');">
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__handle"><span></span></div>
+                <div class="uploads-item__pic uploads-item__pic_slim"></div>
+                <div class="uploads-item__name">mazekine_preview_1.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__handle"><span></span></div>
+                <div class="uploads-item__pic uploads-item__pic_slim"></div>
+                <div class="uploads-item__name">mazekine_preview_2.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__loader">
+                  <div class="loader"><div></div><div></div><div></div><div></div></div>
+                </div>
+                <div class="uploads-item__name">mazekine_preview_3.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+          </div>
+          <label class="uploads-bar" onmouseover="swichOnSection('js-blc-5');" onmouseout="swichOffSection('js-blc-5');">
+            <input type="file" name="desktop_previews" multiple hidden>
+            <span class="uploads-bar__txt mob-hide">Drag file here to update logotype (JPG, PNG, SVG)</span>
+            <span class="uploads-bar__txt mob-show">Tap to upload files</span>
+            <span class="btn btn_red">Browse file</span>
+          </label>
+        </div>
+        <div class="add-bot-form-item">
+          <div class="add-bot-form-item__title">Mobile previews <span class="hint"></span></div>
+          <span class="add-bot-form-item__letter-counter"><span>3</span>/8</span>
+          <div class="add-bot-form-item__txt">Upload the previews of your bot in JPEG, PNG or SVG formats with 528x330 in dimensions to display on mobile</div>
+          <div class="uploads" onmouseover="swichOnSection('js-blc-5');" onmouseout="swichOffSection('js-blc-5');">
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__handle"><span></span></div>
+                <div class="uploads-item__pic uploads-item__pic_slim"></div>
+                <div class="uploads-item__name">mazekine_preview_1.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__handle"><span></span></div>
+                <div class="uploads-item__pic uploads-item__pic_slim"></div>
+                <div class="uploads-item__name">mazekine_preview_2.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+            <div class="uploads-item">
+              <div class="uploads-item__main">
+                <div class="uploads-item__loader">
+                  <div class="loader"><div></div><div></div><div></div><div></div></div>
+                </div>
+                <div class="uploads-item__name">mazekine_preview_3.svg</div>
+              </div>
+              <button class="btn uploads-item__del" title="Del" onclick="this.parentElement.remove()">Del</button>
+            </div>
+          </div>
+          <div class="uploads-bar" onmouseover="swichOnSection('js-blc-5');" onmouseout="swichOffSection('js-blc-5');">
+            <span class="uploads-bar__txt mob-hide">Drag file here to update logotype (JPG, PNG, SVG)</span>
+            <span class="uploads-bar__txt mob-show">Tap to upload files</span>
+            <button class="btn btn_red">Browse file</button>
+          </div>
+        </div>
+      </section>
+      <section class="manag-bot-sec">
+        <h2 class="manag-bot-sec__title">GENERAL</h2>
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Supported languages  <span class="hint"></span></span>          
+          <div class="add-bot-form__select" id="languages">
+            <input autocomplete="off" type="text" name="select_languages" class="input add-bot-form-item__input" placeholder="Supported languages" id="languages-input" onfocus="swichOnSection('js-blc-4');" onblur="swichOffSection('js-blc-4');">
+            <div class="add-bot-form__selected" id="languages-selected"></div>
+            <ul class="add-bot-form__datalist" id="languages-ul"></ul>
+          </div>
+        </div>
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Served countries  <span class="hint"></span></span>          
+          <div class="add-bot-form__select" id="countries">
+            <input autocomplete="off" type="text" name="select_country" class="input add-bot-form-item__input" placeholder="Select country" id="countries-input" onfocus="swichOnSection('js-blc-4');" onblur="swichOffSection('js-blc-4');">
+            <div class="add-bot-form__selected" id="countries-selected"></div>
+            <ul class="add-bot-form__datalist" id="countries-ul"></ul>
+          </div>
+        </div>
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Category</span>          
+          <div class="add-bot-form__select" id="category">
+            <input autocomplete="off" type="text" name="select_categorys" class="input add-bot-form-item__input" placeholder="Select category" id="category-input" onfocus="swichOnSection('js-blc-4');" onblur="swichOffSection('js-blc-4');">
+            <div class="add-bot-form__selected" id="category-selected"></div>
+            <ul class="add-bot-form__datalist" id="category-ul"></ul>
+          </div>
+        </div>
+        <div class="add-bot-form-item">
+          <span class="add-bot-form-item__title">Age limitation</span>          
+          <div class="add-bot-form__select" id="age">
+            <input autocomplete="off" type="text" name="age_limitation" class="input add-bot-form-item__input" placeholder="Select age limitation" id="age-input" onfocus="swichOnSection('js-blc-4');" onblur="swichOffSection('js-blc-4');" readonly>
+            <ul class="add-bot-form__datalist" id="age-ul"></ul>
+          </div>
+        </div>
+      </section>
+      <section class="manag-bot-sec">
+        <h2 class="manag-bot-sec__title">ACTIONS</h2>
+        <div class="add-bot-form-item">
+          <div class="add-bot-form-item__title">Publish release notes</div>
+          <div class="add-bot-form-item__txt">Notify your users about new features and improvements in your bot</div>
+          <input type="text" name="new_version" class="input add-bot-form-item__input" placeholder="New version" onfocus="swichOnSection('js-blc-8');" onblur="swichOffSection('js-blc-8');">
+          <textarea class="input textarea" name="full_description" placeholder="Specify changes here" onfocus="swichOnSection('js-blc-8');" onblur="swichOffSection('js-blc-8');"></textarea>
+        </div>
+        <div class="manag-bot-sec__footer">
+          <div></div>
+          <button class="btn btn_red">Publish</button>
+        </div>
+        <div class="manag-bot-sec__footer">
+          <div class="manag-bot-sec__footer-main">
+            <div class="manag-bot-sec__footer-title">Transfer ownership</div>
+            <div class="manag-bot-sec__footer-txt">Give another user the full control over the bot</div>
+          </div>
+          <button class="btn btn_red">Transfer</button>
+        </div>
+        <div class="manag-bot-sec__footer manag-bot-sec__footer_alert">
+          <div class="manag-bot-sec__footer-main">
+            <div class="manag-bot-sec__footer-title">Revoke verification</div>
+            <div class="manag-bot-sec__footer-txt">You will lose the control over the bot and will be unable to manage its page</div>
+          </div>
+          <button class="btn btn_red">Transfer</button>
+        </div>
+      </section>
+    </div>
+    <div class="manag-bot-wrap__col">
+      <div class="manag-bot-shem__col" id="js-limp-container">
+        <div class="manag-bot-shem__wrap" id="js-limp-blc">
+          <div class="manag-bot-shem">
+            <div class="manag-bot-shem__row">
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_squer js-hem-item" id="js-blc-1"></div>
+              <div class="manag-bot-shem__lines">
+                <div class="manag-bot-shem__blc manag-bot-shem__blc_line js-hem-item" id="js-blc-2"></div>
+                <div class="manag-bot-shem__blc manag-bot-shem__blc_line js-hem-item" id="js-blc-3"></div>
+                <div class="manag-bot-shem__blc manag-bot-shem__blc_line js-hem-item" id="js-blc-4"></div>
+              </div>
+            </div>
+            <div class="manag-bot-shem__row" id="js-blc-5">
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_pic js-hem-item"></div>
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_pic js-hem-item"></div>
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_pic js-hem-item"></div>
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_pic js-hem-item"></div>
+            </div>
+            <div class="manag-bot-shem__grid clearfix">
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_left js-hem-item" id="js-blc-6"></div>
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_right js-hem-item" id="js-blc-7"></div>
+              <div class="manag-bot-shem__blc manag-bot-shem__blc_left js-hem-item" id="js-blc-8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

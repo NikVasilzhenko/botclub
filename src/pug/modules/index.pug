@@ -1,0 +1,21 @@
+.index-page
+  .index-page-header
+    .container
+      .index-page-header__wrap
+        .index-page-header__col
+          h1.index-page-header-title
+            | Telegram bots store
+            span Worldwide
+        .index-page-header__col
+          form.search-form(action="#" method="get")
+            label
+              input.input.search-form__input(type="search" name="search" placeholder="Search bot")
+              .search-form__btn
+  include filters.html
+  include main-bots.html
+  include bots-sec_new-bots
+  include bots-sec_games
+  include bots-sec_finance
+  include bots-sec_blockchain
+
+        

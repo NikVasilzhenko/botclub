@@ -1,0 +1,29 @@
+.rait-select{
+  margin-bottom: 17px;
+  @include flex-center-start;
+  width: 125px;
+  &__star{
+    width: 25px;
+    height: 22px;
+    padding-right: 3px;
+    background: url(../img/svg/star-grey.svg) 0 center no-repeat;
+    background-size: contain;
+    cursor: pointer;      
+  }  
+  &.active{
+    .rait-select__star{
+      background-image: url(../img/svg/star-red.svg);
+      &.active ~ .rait-select__star{background-image: url(../img/svg/star-grey.svg);}
+    }
+  }
+  &:hover{
+    .rait-select__star{
+      background-image: url(../img/svg/star-red.svg) !important;
+      &:hover{background-image: url(../img/svg/star-red.svg);}
+      &:hover ~ .rait-select__star{background-image: url(../img/svg/star-grey.svg) !important;}
+    }
+  }
+  @media only screen and (max-width : 767px){
+    margin-bottom: 13px;
+  }
+}

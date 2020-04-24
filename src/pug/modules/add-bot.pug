@@ -1,0 +1,11 @@
+.add-bot
+  include breadcrumbs.html
+  .container
+    .add-bot__blc
+      .add-bot__header    
+        h1.add-bot__title Add a new bot
+        p.add-bot__txt If you know the bot that is not present in our catalog, fill the form below to add it
+        .green-message.mob-hide
+          button.btn.green-message__close(title='Close')
+          p.green-message__txt Thank you, we have recorded your proposal. The bot will appear in the catalog after moderation.
+      include add-bot-form.html

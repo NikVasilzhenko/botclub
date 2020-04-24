@@ -1,0 +1,70 @@
+header.header
+  .mob-search#js-mob-search
+    form.mob-search__form(action="#" method="get")
+      label
+        input.input.mob-search__input(type="search" name="mob-search" placeholder="Search")
+        .mob-search__btn
+          img(src="img/svg/search-white.svg" alt="")
+    button.btn.mob-search__close(onclick="openMobSearch();") 
+  .header__wrap
+    button.btn.btn-burger#js-menu-burger(onclick="openMobMenu();")
+      span
+    a.header-logo(href="/")
+      img(src="img/svg/botclub.svg" alt="Bots Club")
+    nav.header-bar
+      ul
+        li
+          a.header-bar__link.active(href="#") Telegram bots catalog
+        li
+          a.header-bar__link.header-bar__link_add(href="#") Add new bot
+        li
+          span.header-bar__link.header-bar__link_login.header-bar__link_drop.js-drop Vladislav Ponomarev
+          ul.header-bar__sub
+            li
+              a.header-bar__sublink.active(href="#") My bots
+            li
+              a.header-bar__sublink(href="#") Profile
+            li
+              a.header-bar__sublink.header-bar__sublink_top-border(href="#") Sign out
+        li
+          span.header-bar__link.header-bar__link_lang.header-bar__link_drop.js-drop En
+          ul.header-bar__sub
+            li
+              a.header-bar__sublink.active(href="#" lang="En")
+                img(src="img/svg/gb.svg" alt="GB")
+                span  En
+            li
+              a.header-bar__sublink(href="#" lang="Ru-ru")
+                img(src="img/svg/ru.svg" alt="Ru")
+                span Рус
+    button.btn.btn-search(onclick="openMobSearch();" title="Search")
+      img(src="img/svg/search-white.svg" alt="")
+.mob-menu#js-mob-menu
+  .mob-menu__overlay(onclick="openMobMenu();")
+  .mob-menu__main
+    nav.header-bar
+      ul
+        li
+          a.header-bar__link.active(href="#") Telegram bots catalog
+        li
+          a.header-bar__link.header-bar__link_add(href="#") Add new bot
+        li
+          span.header-bar__link.header-bar__link_login.header-bar__link_drop.js-drop Vladislav Ponomarev
+          ul.header-bar__sub
+            li
+              a.header-bar__sublink.active(href="#") My bots
+            li
+              a.header-bar__sublink(href="#") Profile
+            li
+              a.header-bar__sublink.header-bar__sublink_top-border(href="#") Sign out
+        li
+          span.header-bar__link.header-bar__link_lang.header-bar__link_drop.js-drop En
+          ul.header-bar__sub
+            li
+              a.header-bar__sublink.active(href="#" lang="En")
+                img(src="img/svg/gb.svg" alt="GB")
+                span  En
+            li
+              a.header-bar__sublink(href="#" lang="Ru-ru")
+                img(src="img/svg/ru.svg" alt="Ru")
+                span Рус

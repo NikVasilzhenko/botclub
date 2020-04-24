@@ -1,0 +1,203 @@
+.my-bot{
+  margin: 48px 0;
+  &__wrap{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__col{
+    width: calc(50% - 11px);
+    margin-bottom: 22px;
+  }
+  @media only screen and (max-width : 767px){
+    margin: 20px 0 32px;
+    &__wrap{display: block;}
+    &__col{
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+.my-bot-bar{
+  padding: 8px 0;
+  border-bottom: 1px solid $clr-brd-popup;
+  &:last-child{border-bottom: none;}
+  &__item{
+    display: block;
+    width: 100%;
+    text-align: left;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 12px;
+    color: $clr-txt-light;
+    font-weight: 500;
+    font-size: 12px;
+    position: relative;
+    &:hover{background-color: $clr-bg-grey-btn;}
+    &.active{color: $clr-red;}
+    &.red{color: $clr-error;}
+    &.active{
+      &:after{
+        content: '';
+        display: block;
+        background: url(../img/svg/check-red.svg) center center no-repeat;
+        background-size: contain;
+        width: 11px; 
+        height: 11px;
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        margin-top: -5.1px;
+      }
+    }
+    i{
+      display: inline-block;
+      vertical-align: middle;
+      width: 11px;
+      margin-right: 9px;
+    }
+  }
+  @media only screen and (max-width : 767px){
+    padding: 0;
+    &:first-child{padding-top: 12px;}
+    border-bottom: none;
+    &__item{
+      height: 36px;
+      line-height: 36px;
+      padding: 0 24px;
+      font-size: 16px;
+      font-weight: 400;
+      &.active{
+        &:after{
+          width: 17px; 
+          height: 18px;
+          right: 28px;
+          margin-top: -9px;
+        }
+      }
+      i{
+        width: 15px;
+        margin-right: 10px;
+        img{
+          width: 100%;
+          position: relative;
+          top: -2px;
+        }
+      }
+    }
+  }
+}
+.my-bot-blc{
+  background: $clr-bg;
+  border: 1px solid $clr-brd-input;
+  box-shadow: $shd-item;
+  border-radius: 4px;
+  &-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 12px;
+    &__main{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &__pic{
+      background-color: $clr-grey;
+      overflow: hidden;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+    }
+    &__name{
+      margin-bottom: 4px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__category{
+      color: $clr-red;
+      font-size: 12px;
+      line-height: 14px;
+      &:hover{text-decoration: underline;}
+    }
+    
+  }
+  @media only screen and (max-width : 767px){
+    &-header{
+      &__mob-btn{
+        width: 48px;
+        height: 48px;
+        position: relative;
+        &:before,&:after,span{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $clr-txt-grey;
+          left: 50%;
+          margin-top: -2px;
+        }
+        &:before{margin-left: -9px;}
+        &:after{margin-left: 5px;}
+        span{margin-left: -2px;}
+      }
+    }    
+  }
+}
+.my-bot-blc-tabs{
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-x: auto;
+  border-top: 1px solid $clr-brd-input;
+  @media only screen and (max-width : 767px){
+    border-bottom: 1px solid $clr-brd-input;
+  }
+}
+.my-bot-blc-tab{
+  width: 96px;
+  min-width: 96px;
+  padding: 16px 10px 13px 16px;
+  cursor: pointer;
+  transition: .25s;
+  color: $clr-txt-grey;
+  position: relative;
+  font-weight: 300;
+  &.active{
+    font-weight: 400;
+    color: $clr-txt-light;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $clr-red;
+    }
+  }
+  &:hover{background-color: $clr-bg-grey-btn;}
+  &__name{
+    margin-bottom: 13px;    
+    font-size: 14px;
+    line-height: 16px;    
+  }
+  &__val{
+    margin-bottom: 9px;
+    font-size: 26px;
+    line-height: 1;
+  }
+  &__plus{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    &.red{color: $clr-error;}
+    &.green{color: $clr-green;}
+  }
+}

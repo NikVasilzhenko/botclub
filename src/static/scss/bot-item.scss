@@ -1,0 +1,78 @@
+.bot-item{
+  display: block;
+  width: 170px;
+  position: relative;
+  background-color: $clr-bg-input;
+  border: 1px solid $clr-brd-input;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+  border-radius: 4px;
+  padding: 12px 11px;
+  &:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  }
+  &__pic{
+    width: 100%;
+    padding-top: 100%;
+    background-color: $clr-grey;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  &__verify{
+    top: 18px;
+    right: 18px;
+  }
+  &__name{
+    font-size: 18px;
+    line-height: 21px;
+    color: $clr-txt;
+    margin-bottom: 4px;
+  }
+  &__txt{
+    position: relative;
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $clr-red;
+    overflow: hidden;
+    white-space: nowrap;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: -webkit-linear-gradient(right, #FAFBFC 0%, rgba(250, 251, 252, 0) 100%);
+      background: -o-linear-gradient(right, #FAFBFC 0%, rgba(250, 251, 252, 0) 100%);
+      background: linear-gradient(to left, #FAFBFC 0%, rgba(250, 251, 252, 0) 100%);
+      width: 70px;
+      z-index: 2;
+    }
+  }
+  @media only screen and (max-width : 767px){
+    width: 145px;
+    min-width: 145px;
+    border-radius: 1px;
+    padding: 8px 8px 12px;
+    &__verify{
+      top: 16px;
+      right: 16px;
+    }
+    &__name{
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+    &__txt{
+      margin-bottom: 16px;
+      font-size: 10px;
+      line-height: 12px;
+      &:after{width: 46px;}
+    }
+    &__rait{
+      height: 12px;
+      width: 66px;
+    }
+  }
+}

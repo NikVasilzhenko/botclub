@@ -1,0 +1,36 @@
+.footer{
+  padding: 17px 0;
+  font-size: 14px;
+  line-height: 16px;
+  &__wrap{@include flex-center-between;}
+  @media only screen and (max-width : 767px){
+    padding: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    &__wrap{display: block;}
+  }
+}
+.footer-nav{
+  ul{
+    @include flex-center-between;
+    li{
+      margin-left: 16px;
+      a{
+        color: $clr-blue;
+        &:hover{text-decoration: underline;}
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    ul{
+      display: block;
+      max-width: 184px;
+      margin: 0 auto;
+      li{
+        display: inline-block;
+        margin: 12px 6px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+<div class="my-bot">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">My bots</h1>
+      <div class="drop-group mob-hide">
+        <button class="btn drop-group__btn drop-group__btn_big js-drop" id="js-display-period">Week</button>
+        <div class="drop-group__hide">
+          <ul class="my-bot-bar">
+            <li><button class="btn my-bot-bar__item js-item" onclick="checkThisLink(this, 'js-display-period');">Day</button></li>
+            <li><button class="btn my-bot-bar__item js-item active" onclick="checkThisLink(this, 'js-display-period');">Week</button></li>
+            <li><button class="btn my-bot-bar__item js-item" onclick="checkThisLink(this, 'js-display-period');">Month</button></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn drop-group__btn drop-group__btn_big mob-show" id="js-display-period-mob" onclick="openPopup('js-display-period-popup')">Week</button>
+    </div>
+    <div class="my-bot__wrap">
+     
+      <div class="my-bot__col">
+        <div class="my-bot-blc">
+          <div class="my-bot-blc-header">
+            <div class="my-bot-blc-header__main">
+              <div class="my-bot-blc-header__pic"></div>
+              <div class="my-bot-blc-header__txt">
+                <div class="my-bot-blc-header__name">Mazekine</div>
+                <a href="#" class="my-bot-blc-header__category">Blockchain and cryptocurrency</a>
+              </div>
+            </div>
+            <div class="my-bot-blc-header__bar">
+              <div class="drop-group mob-hide">
+                <button class="btn drop-group__btn drop-group__btn_small js-drop">Actions</button>
+                <div class="drop-group__hide">
+                  <ul class="my-bot-bar">
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/edit.svg" alt=""></i>Manage bot</a></li>
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/add.svg" alt=""></i>Add new release notes</a></li>
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/goto.svg" alt=""></i>Go to bot page</a></li>
+                  </ul>
+                  <ul class="my-bot-bar">
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/transfer.svg" alt=""></i>Transfer ownership</a></li>
+                    <li><a href="#" class="my-bot-bar__item red"><i><img src="img/svg/del.svg" alt=""></i>Revoke verification</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button class="btn my-bot-blc-header__mob-btn mob-show" onclick="openPopup('js-bot-actions-popup-1')"><span></span></button>
+            </div>
+          </div>
+          <div class="my-bot-blc-tabs">
+            <div class="my-bot-blc-tab active">
+              <div class="my-bot-blc-tab__name">Rating</div>
+              <div class="my-bot-blc-tab__val">4.7</div>
+              <div class="my-bot-blc-tab__plus green">+ 0.2</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Ranking</div>
+              <div class="my-bot-blc-tab__val">125</div>
+              <div class="my-bot-blc-tab__plus red">- 12</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Views</div>
+              <div class="my-bot-blc-tab__val">2 145</div>
+              <div class="my-bot-blc-tab__plus">+ 0</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">CTR</div>
+              <div class="my-bot-blc-tab__val">0.32%</div>
+              <div class="my-bot-blc-tab__plus green">+ 0.12</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Comments</div>
+              <div class="my-bot-blc-tab__val">92</div>
+              <div class="my-bot-blc-tab__plus red">- 10</div>
+            </div>
+          </div>
+          <div class="my-bot-blc-main">
+            /// График ///
+          </div>
+        </div>        
+        <div class="popup" id="js-bot-actions-popup-1" style="display: none;">
+          <div class="popup__overlay" onclick="closePopup('js-bot-actions-popup-1');"></div>
+          <div class="popup__blc">
+            <button class="btn popup__close" title="Close" onclick="closePopup('js-bot-actions-popup-1');"></button>
+            <div class="popup__main">
+              <h2 class="popup__title">Bot actions</h2>
+              <div class="my-bot-bar-popup">
+                <ul class="my-bot-bar">
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/edit.svg" alt=""></i>Manage bot</a></li>
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/add.svg" alt=""></i>Add new release notes</a></li>
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/goto.svg" alt=""></i>Go to bot page</a></li>
+                </ul>
+                <ul class="my-bot-bar">
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/transfer.svg" alt=""></i>Transfer ownership</a></li>
+                  <li><a href="#" class="my-bot-bar__item red"><i><img src="img/svg/del.svg" alt=""></i>Revoke verification</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="my-bot__col">
+        <div class="my-bot-blc">
+          <div class="my-bot-blc-header">
+            <div class="my-bot-blc-header__main">
+              <div class="my-bot-blc-header__pic"></div>
+              <div class="my-bot-blc-header__txt">
+                <div class="my-bot-blc-header__name">Mazekine</div>
+                <a href="#" class="my-bot-blc-header__category">Blockchain and cryptocurrency</a>
+              </div>
+            </div>
+            <div class="my-bot-blc-header__bar">
+              <div class="drop-group mob-hide">
+                <button class="btn drop-group__btn drop-group__btn_small js-drop">Actions</button>
+                <div class="drop-group__hide">
+                  <ul class="my-bot-bar">
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/edit.svg" alt=""></i>Manage bot</a></li>
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/add.svg" alt=""></i>Add new release notes</a></li>
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/goto.svg" alt=""></i>Go to bot page</a></li>
+                  </ul>
+                  <ul class="my-bot-bar">
+                    <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/transfer.svg" alt=""></i>Transfer ownership</a></li>
+                    <li><a href="#" class="my-bot-bar__item red"><i><img src="img/svg/del.svg" alt=""></i>Revoke verification</a></li>
+                  </ul>
+                </div>
+              </div>
+              <button class="btn my-bot-blc-header__mob-btn mob-show" onclick="openPopup('js-bot-actions-popup-2')"><span></span></button>
+            </div>
+          </div>
+          <div class="my-bot-blc-tabs">
+            <div class="my-bot-blc-tab active">
+              <div class="my-bot-blc-tab__name">Rating</div>
+              <div class="my-bot-blc-tab__val">4.7</div>
+              <div class="my-bot-blc-tab__plus green">+ 0.2</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Ranking</div>
+              <div class="my-bot-blc-tab__val">125</div>
+              <div class="my-bot-blc-tab__plus red">- 12</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Views</div>
+              <div class="my-bot-blc-tab__val">2 145</div>
+              <div class="my-bot-blc-tab__plus">+ 0</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">CTR</div>
+              <div class="my-bot-blc-tab__val">0.32%</div>
+              <div class="my-bot-blc-tab__plus green">+ 0.12</div>
+            </div>
+            <div class="my-bot-blc-tab">
+              <div class="my-bot-blc-tab__name">Comments</div>
+              <div class="my-bot-blc-tab__val">92</div>
+              <div class="my-bot-blc-tab__plus red">- 10</div>
+            </div>
+          </div>
+          <div class="my-bot-blc-main">
+            /// График ///
+          </div>
+        </div>        
+        <div class="popup" id="js-bot-actions-popup-2" style="display: none;">
+          <div class="popup__overlay" onclick="closePopup('js-bot-actions-popup-2');"></div>
+          <div class="popup__blc">
+            <button class="btn popup__close" title="Close" onclick="closePopup('js-bot-actions-popup-2');"></button>
+            <div class="popup__main">
+              <h2 class="popup__title">Bot actions</h2>
+              <div class="my-bot-bar-popup">
+                <ul class="my-bot-bar">
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/edit.svg" alt=""></i>Manage bot</a></li>
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/add.svg" alt=""></i>Add new release notes</a></li>
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/goto.svg" alt=""></i>Go to bot page</a></li>
+                </ul>
+                <ul class="my-bot-bar">
+                  <li><a href="#" class="my-bot-bar__item"><i><img src="img/svg/transfer.svg" alt=""></i>Transfer ownership</a></li>
+                  <li><a href="#" class="my-bot-bar__item red"><i><img src="img/svg/del.svg" alt=""></i>Revoke verification</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="popup" id="js-display-period-popup" style="display: none;">
+  <div class="popup__overlay" onclick="closePopup('js-display-period-popup');"></div>
+  <div class="popup__blc">
+    <button class="btn popup__close" title="Close" onclick="closePopup('js-display-period-popup');"></button>
+    <div class="popup__main">
+      <h2 class="popup__title">Display period</h2>
+      <div class="my-bot-bar-popup">
+        <ul class="my-bot-bar">
+          <li><button class="btn my-bot-bar__item js-item" onclick="checkThisLink(this, 'js-display-period-mob');">Day</button></li>
+          <li><button class="btn my-bot-bar__item js-item active" onclick="checkThisLink(this, 'js-display-period-mob');">Week</button></li>
+          <li><button class="btn my-bot-bar__item js-item" onclick="checkThisLink(this, 'js-display-period-mob');">Month</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
