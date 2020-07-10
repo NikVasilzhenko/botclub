@@ -10,6 +10,13 @@
   &:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
   }
+  figure{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+  }
   &__pic{
     width: 100%;
     padding-top: 100%;
