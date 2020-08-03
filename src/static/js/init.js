@@ -1,4 +1,18 @@
-// pics slider init
+//pics slider init
+var picCarusel = new Swiper('#js-pic-carusel', {
+  slidesPerView: 'auto',
+  spaceBetween: 4,
+  freeMode: true,
+  navigation: {
+      nextEl: '#js-pic-carusel-next',
+      prevEl: '#js-pic-carusel-prev',
+    },
+  breakpoints: {
+    768: {
+      spaceBetween: 10,
+    }
+  }
+});
 
 if(document.body.clientWidth > 767){
   var picsSlider = new Swiper('#js-pics-slider', {
@@ -20,3 +34,4 @@ if(document.body.clientWidth > 767){
     }
   });
 }
+
